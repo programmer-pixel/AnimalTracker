@@ -9,6 +9,9 @@ import java.io.File;
 /**
  * Side-by-side webcam view for image filtering
  * by David Dobervich
+ *
+ * TODO:  Make Main a runner class that invokes some other object so that it's easy to run it with pre-loaded
+ *  configurations (e.g. same video, or same filter)
  */
 public class Main extends PApplet {
     private static final int WEBCAM_WIDTH = 640;
