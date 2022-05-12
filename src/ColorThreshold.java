@@ -1,10 +1,10 @@
 import processing.core.PApplet;
 
 public class ColorThreshold implements PixelFilter, Clickable {
-    private static double THRESHOLD = 120;
-    private static short TARGET_RED = 255;
-    private static short TARGET_GREEN = 0;
-    private static short TARGET_BLUE = 0;
+    private static double THRESHOLD = 30;
+    private static short TARGET_RED = 170;
+    private static short TARGET_GREEN = 170;
+    private static short TARGET_BLUE = 170;
 
     @Override
     public DImage processImage(DImage img) {
@@ -54,8 +54,8 @@ public class ColorThreshold implements PixelFilter, Clickable {
 
     @Override
     public void keyPressed(char key) {
-        if (key == '+') THRESHOLD += 10;
-        if (key == '-') THRESHOLD -= 10;
+        if (key == 'w') THRESHOLD += 10;
+        if (key == 's') THRESHOLD -= 10;
         System.out.println("Threshold: " + THRESHOLD);
     }
 }

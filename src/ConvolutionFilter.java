@@ -5,15 +5,15 @@ import processing.core.PApplet;
  */
 public class ConvolutionFilter implements PixelFilter {
     //private static final int[][] BOX_BLUR_3X3 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
-    //private static final int[][] BOX_BLUR_GENERAL = NxNboxBlur(9);
+    private static final int[][] BOX_BLUR_GENERAL = NxNboxBlur(3);
     //private static final int[][] SHARPEN_3X3 = {{0, -1, 0}, {-1, 5, -1}, {0, -1, 0}};
-    private static final int[][] PREWITT_EDGE_DETECTION = {{-1, -1, -1}, {-1, 8, -1}, {-1, -1, -1}};
+    //private static final int[][] PREWITT_EDGE_DETECTION = {{-1, -1, -1}, {-1, 8, -1}, {-1, -1, -1}};
 
     private int[][] kernel;
     private int kernelWeight;
 
     public ConvolutionFilter() {
-        kernel = PREWITT_EDGE_DETECTION;
+        kernel = BOX_BLUR_GENERAL;
         kernelWeight = getKernelWeight(kernel);
     }
 
